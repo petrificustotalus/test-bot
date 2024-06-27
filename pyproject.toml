@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "test-bot"
+version = "0.1.0"
+description = "Python bot for RSI indicator"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-dotenv = "^1.0.1"
+discord = "^2.3.2"
+numpy = "^2.0.0"
+requests = "^2.32.3"
+pandas = "^2.2.2"
+ta = "^0.11.0"
+schedule = "^1.2.2"
+asyncio = "^3.4.3"
+apscheduler = "^3.10.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
