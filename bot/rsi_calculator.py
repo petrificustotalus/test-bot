@@ -1,6 +1,8 @@
+from decimal import Decimal
+
 from pandas import DataFrame
 from ta import momentum
-from decimal import Decimal
+
 
 def calculate_rsi(closing_prices: list):
     df = DataFrame({"close": closing_prices})
