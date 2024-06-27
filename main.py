@@ -28,19 +28,14 @@ bybit_client: BybitClient = BybitClient(API_KEY, API_SECRET)
 # MESSAGE FUNCTIONALITY
 async def send_notification(rsi: Decimal) -> None:
     try:
-        ####### TO REMOVE BEFORE COMPLETED, MAYBE ADD SOME LOGS TO BE SURE
-        response: str = f'Nothing to worry about, RSI: {rsi}'
-        print("?????????????")
-        print(rsi)
-        if rsi > 70 or rsi < 30 and previously_upnormal.get() is False:
+        if (rsi > 70 or rsi < 30) and previously_upnormal.get() is False:
             previously_upnormal.set(True)
             response: str = f'Current RSI: {rsi}'
             channel = bot.get_channel(int(CHANNEL_ID))
             await channel.send(response)
         else:
             previously_upnormal.set(False)
-            # channel = bot.get_channel(int(CHANNEL_ID))
-            # await channel.send(response)
+
     # TO HANDLE
     except Exception as e:
         print(e)
