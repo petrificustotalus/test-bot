@@ -15,6 +15,7 @@ BYBIT_SECRET_KEY={BYBIT_SECRET_KEY}
 -  You can obtain the Discord channel ID by enabling developer mode in your Discord application, then right-clicking on the channel and choosing “Copy Channel ID.”
 
 ### Requirements
+- Pyenv
 - Python 3.12
 - Poetry 1.8.3
 - Docker
@@ -22,6 +23,8 @@ BYBIT_SECRET_KEY={BYBIT_SECRET_KEY}
 
 ## Run localy:
 - navigate to the project repository
+- `pyenv install 3.12` if not already installed
+- `pyenv local 3.12`
 - `poetry shell`
 - `poetry install`
 - `python3 main.py`

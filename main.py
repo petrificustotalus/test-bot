@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 from discord import Intents
 from discord.ext import commands, tasks
 
-from bybit_client import BybitClient
-from rsi_calculator import calculate_rsi, get_closing_prices
+from bot.bybit_client import BybitClient
+from bot.rsi_calculator import calculate_rsi, get_closing_prices
 from contextvars import ContextVar
 
 previously_upnormal: ContextVar[bool] = ContextVar('extremal', default=False)
