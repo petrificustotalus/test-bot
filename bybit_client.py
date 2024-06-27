@@ -17,7 +17,5 @@ class BybitClient:
 
         response = requests.get(base_url, params=params)
         data = response.json()
-        
-        # convert data to Pydantic schema?
 
         return data
